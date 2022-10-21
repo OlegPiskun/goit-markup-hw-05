@@ -90,11 +90,29 @@ body {
 }
 
 .list .link {
+  position: relative;
+
   font-weight: var(--second-font-weight);
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #212121;
   vertical-align: middle;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 /* Контакти */
@@ -123,6 +141,8 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #757575;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list .link:hover,
@@ -191,6 +211,8 @@ body {
   letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+
+  /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .hero-button:hover,
@@ -222,6 +244,9 @@ body {
   color: #212121;
   font-family: inherit;
   cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-portfolio .item:first-child {
@@ -276,6 +301,8 @@ body {
 
 .projects-link {
   display: block;
+
+  transition: box-shadow 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-link:hover,
@@ -283,6 +310,33 @@ body {
 .projects-link:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.projects-img {
+  position: relative;
+  /* width: 370px;
+  height: 294px; */
+}
+
+.projects-description::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(33, 150, 243, 0.9); */
+}
+
+.description-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #000000;
+  /* color: var(--primary-white-color); */
 }
 
 .projects-box {
@@ -372,11 +426,37 @@ body {
 }
 
 .activity-set .item {
+  position: relative;
   width: 370px;
+  height: 294px;
 }
 
 .activity-set .item:not(:last-child) {
   margin-right: 30px;
+}
+
+.activity-applications {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.applications-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  font-weight: var(--primary-font-weight);
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--primary-white-color);
 }
 
 /* Наша команда */
@@ -453,6 +533,9 @@ body {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+  background-color: var(--primary-white-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-color:hover,
@@ -465,6 +548,8 @@ body {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-color:hover > .social-icon,
@@ -497,6 +582,8 @@ body {
   height: 100%;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover .clients-icon,
@@ -514,6 +601,8 @@ body {
   width: 106px;
   height: 60px;
   fill: #afb1b8;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Підвал сторінки */
@@ -574,6 +663,8 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Приєднуйтесь */
@@ -607,7 +698,9 @@ body {
   height: 44px;
   border-radius: 50%;
 
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-social-footer:hover,
