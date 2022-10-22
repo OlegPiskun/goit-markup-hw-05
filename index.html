@@ -69,7 +69,7 @@
             <h1 class="hero-title">
               Ефективні рішення для<br />вашого бізнесу
             </h1>
-            <button class="hero-button active" type="button">
+            <button class="hero-button active data-modal-open" type="button">
               Замовити послугу
             </button>
           </div>
@@ -516,5 +516,17 @@
         </div>
       </div>
     </footer>
+
+    <!-- Модальне вікно -->
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="button-modal data-modal-close" type="button">
+          <span class="icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
