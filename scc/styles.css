@@ -212,7 +212,7 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 
-  /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -295,14 +295,11 @@ body {
   gap: 30px;
 }
 
-.projects-item {
-  width: 370px;
-}
-
 .projects-link {
   display: block;
+  box-shadow: none;
 
-  transition: box-shadow 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-link:hover,
@@ -317,6 +314,7 @@ body {
 }
 
 .projects-img {
+  height: 294px;
   position: relative;
   overflow: hidden;
 }
@@ -532,7 +530,6 @@ body {
 .link-icon .items {
   margin-top: 16px;
   margin-bottom: 30px;
-  gap: 10px;
 }
 
 .link-icon .link-color {
@@ -732,7 +729,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 0.5);
 
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -765,10 +762,29 @@ body {
 }
 
 .button-modal {
-  display: inline-flex;
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  display: flex;
   align-items: center;
   width: 30px;
   height: 30px;
-  background: var(--primary-white-color);
+  border-radius: 50%;
+  background-color: var(--primary-white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
+
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-modal-icon {
+  width: 18px;
+  height: 18px;
+  fill: #000000;
+}
+
+.button-modal:hover,
+.button-modal:focus {
+  background-color: var(--accent-color);
 }
